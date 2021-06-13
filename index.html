@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment 4</title>
+    <style>
+        #square{
+            display: flex;
+            justify-content: center;
+            height: 200px;
+            width: 200px;
+            background-color: brown;;
+            border-style: dashed;
+            border-color: black;
+            border-width: thick;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+        div.square{
+            display: flex ;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+    <button id="btn1" onclick="funct(event)">Solid Border</button>
+    <button id="btn2" onclick="funct(event)">Double Border</button>
+    <button id="btn3" onclick="funct(event)">Dotted Border</button>
+    </div>
+    <div class="square">
+    <div id="square">
+    </div>
+    </div>
+    <script>
+        function funct(event){
+            if (event.target.id=="btn1")
+            {
+                document.getElementById("square").style.borderStyle="solid";
+            }
+            if (event.target.id=="btn2")
+            {
+                document.getElementById("square").style.borderStyle="double";
+            }
+            if (event.target.id=="btn3")
+            {
+                document.getElementById("square").style.borderStyle="dotted";
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>
